@@ -116,3 +116,14 @@ function afficherType(item: string | undefined): void {
         const result = item.toLowerCase(); // C'est une string uniquement
     }
 }
+
+function utilisationAny(item: any): void {
+    item.toLowerCase();
+}
+
+function utilisationUnknown(item: unknown): void {
+    if (typeof(item) === 'string') {
+        item.toLocaleLowerCase();
+    }
+}
+

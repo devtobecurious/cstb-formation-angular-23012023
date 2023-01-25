@@ -1,0 +1,28 @@
+{{ uneFonctionANePasUtiliser() }}
+
+
+<ng-template #conteneur *ngIf="! avoirDesElements">
+  Aucun selfie présent
+</ng-template>
+
+
+<i *ngIf="! avoirDesElements">Aucun selfie présent</i>
+
+<button (click)="addSelfie(2)">[+]</button>
+<button (click)="removeSelfie(1)">[-]</button>
+
+<h2>{{ titre }}</h2>
+
+<table *ngIf="avoirDesElements">
+  <tr *ngFor="let item of selfies; ">
+    <td>
+      {{ item.date | date }}
+    </td>
+    <td>
+      {{ item.titre | firstUpper }}
+    </td>
+    <td>
+      {{ item.description }}
+    </td>
+  </tr>
+</table>
