@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "projects/selefie-a-wookie",
       "sourceRoot": "projects/selefie-a-wookie/src",
-      "prefix": "app",
+      "prefix": "saw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

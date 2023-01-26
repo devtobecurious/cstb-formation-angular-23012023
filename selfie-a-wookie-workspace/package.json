@@ -1,10 +1,24 @@
 {
   "name": "selfie-a-wookie-workspace",
   "version": "0.0.0",
+
+  "config": {
+    "env local a npm": ""
+  },
+
   "scripts": {
     "tsc": "tsc",
     "ng": "ng",
-    "start": "ng serve",
+
+    "prebuild:lib": "echo 'coucou'",
+    "build:lib": "ng build malib",
+    "postbuild:lib": "echo 'cest fini'",
+
+
+
+    "start": "ng serve -o --port=4201",
+
+
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

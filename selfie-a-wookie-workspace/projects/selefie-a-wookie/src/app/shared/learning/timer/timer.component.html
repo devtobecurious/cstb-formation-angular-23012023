@@ -1,0 +1,11 @@
+<h2>Timer déclenché à l'affichage</h2>
+
+<div *ngIf="timerSansUnsubscribeDansComponent$ | async as tick">
+  {{tick}}
+</div>
+
+<h2>Démarrage au click</h2>
+<button (click)="start()">Start</button>
+<button (click)="stop()">Stop</button>
+
+<span>{{ tickValue }}</span>

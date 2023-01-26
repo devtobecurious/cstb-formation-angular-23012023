@@ -1,0 +1,5 @@
+<form [formGroup]="selfieCreationForm">
+  <input type="text" formControlName="titre">
+
+  <button [disabled]="! selfieCreationForm.valid">Save</button>
+</form>

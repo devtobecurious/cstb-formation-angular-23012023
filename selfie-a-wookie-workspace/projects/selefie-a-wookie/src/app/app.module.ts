@@ -7,15 +7,25 @@ import { SelfiesModule } from './features/selfies/selfies.module';
 import { FirstUpperPipe } from './shared/ui/components/pipes/first-upper/first-upper.pipe';
 import { FirstUpperModule } from './shared/ui/components/pipes/first-upper/first-upper.module';
 import { LoggerService } from './shared/services/logger.service';
+import { ObservablesComponent } from './shared/learning/observables/observables.component';
+import { TimerComponent } from './shared/learning/timer/timer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
+import { MenuComponent } from './shared/ui/components/menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SelfiesModule
+    HttpClientModule,
+    SelfiesModule,
+    TimerComponent,
+    ObservablesComponent // c'est un component/module
   ],
   providers: [
     // LoggerService

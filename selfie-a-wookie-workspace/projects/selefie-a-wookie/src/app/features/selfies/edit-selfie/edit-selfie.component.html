@@ -1,0 +1,5 @@
+<form #monForm="ngForm">
+  <input type="text" required [(ngModel)]="item.titre">
+
+  <button [disabled]="! monForm.form.valid" (click)="save()">Save</button>
+</form>
